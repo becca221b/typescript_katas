@@ -12,6 +12,6 @@ export const fizzBuzz: FizzBuzz = (valor) => {
     if (isDivisibleBy5) {
         return "Buzz"
     }
-    console.log(valor);
+   
     return valor;
 }
