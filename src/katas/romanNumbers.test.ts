@@ -27,7 +27,13 @@ describe('toRoman', () => {
         expect(toRoman(6)).toBe('VI');
         expect(toRoman(7)).toBe('VII');
         expect(toRoman(8)).toBe('VIII');
-        //expect(toRoman(9)).toBe('IX');
-        //expect(toRoman(10)).toBe('X');
+        expect(toRoman(9)).toBe('IX');
+        
+    });
+});
+
+describe('toRoman', () => {
+    test('toRoman deberia convertir el numero 10 a numero romano', () => {
+       expect(toRoman(10)).toBe('X');
     });
 });

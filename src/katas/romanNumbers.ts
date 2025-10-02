@@ -7,14 +7,36 @@ export const toRoman: ToRoman = (value) => {
     if (digit0 >= 1 && digit0 <= 3) {
         romanNumber = 'I'.repeat(value);
     }
-    if(digit0 === 4) {
-        romanNumber = 'IV';
+    if(digit0 === 4 ) {
+        
+        if (digit0 === 4) romanNumber = 'IV';
     }
     if (digit0 === 5) {
-        return 'V';
+        romanNumber = 'V';
     }
     if(digit0 >= 6 && digit0 <= 9) {
-        return 'V' + 'I'.repeat(value - 5);
+        if (digit0 === 9) romanNumber = 'IX'
+        else{
+            romanNumber = 'V' + 'I'.repeat(value - 5);
+        }
+        
+    }
+
+    let digit1 = getDigit(value, 1);
+    console.log(digit1);
+    if (digit1 >= 1 && digit1 <= 3) {
+        romanNumber += 'X'.repeat(digit1);
+    }
+    if(digit1 === 4 ) {
+        
+        if (digit1 === 4) romanNumber += 'XL';
+    }
+    if (digit1 === 5) {
+        romanNumber += 'L';
+    }
+    if(digit1 >= 6 && digit1 <= 9) {
+        if (digit1 === 9) return 'IX';
+        romanNumber = 'L' + 'X'.repeat(digit1 - 5);
     }
     
     
